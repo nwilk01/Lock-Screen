@@ -1,0 +1,2 @@
+C:\Users\Admin\Desktop\Visual Studio\System Lock\System Lock\bin\Debug\System Lock.exe.config
+C:\Users\Admin\Desktop\GitHub\Lock-Screen\System Lock\System Lock\bin\Debug\System Lock.exe.config
