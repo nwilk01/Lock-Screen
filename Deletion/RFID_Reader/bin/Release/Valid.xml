@@ -4,7 +4,11 @@
     <CC Num="12345467890123456"/>
     <Bill Total="734.69"/>
   </RFID_Tag>
-  <RFID_Tag ID="70005AA6F9" />
+  <RFID_Tag ID="70005AA6F9">
+    <Name Person=""/>
+    <CC Num=""/>
+    <Bill Total=""/>
+  </RFID_Tag>
   <RFID_Tag ID="70005A4DB9" />
   <RFID_Tag ID="70005AACD6" />
   <RFID_Tag ID="70005A4C03" />

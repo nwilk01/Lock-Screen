@@ -80,11 +80,21 @@ namespace RFID_Reader
                                                (string)tag.Element("Bill").Attribute("Total").Value;
                 foreach (string tag in RFIDTags) {
                     PlaySound();
-                    form.Show();
+                    //form.Show();
+                    
                     string[] info = tag.Split('\n');
-                    MessageBox.Show(info[0]);
-                    MessageBox.Show(info[1]);
-                    MessageBox.Show(info[2]);
+                    if(info[0] == "" && info[1]== "" && info[2] =="$")
+                    {
+                        string cc = Console.ReadLine();
+                        MessageBox.Show(cc);
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Fail");
+                        
+                    }
+                    
                 }
 
 
