@@ -16,7 +16,8 @@ namespace System_Lock
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.StartupPath;
+            Application.Run(new Lock());
         }
     }
 }
