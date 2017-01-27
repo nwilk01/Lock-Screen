@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFID_Reader_UI", "RFID_Reader\RFID_Reader_UI.csproj", "{6A0DEF15-914D-4000-AD36-0891FD7729E1}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{A6CDF6FC-F760-4C5A-8893-551119E5E932}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parallax28340", "Parallax28340\Parallax28340.csproj", "{618F4724-E31B-45AA-BF6F-FB61EAC1F736}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A0DEF15-914D-4000-AD36-0891FD7729E1}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{6A0DEF15-914D-4000-AD36-0891FD7729E1}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{6A0DEF15-914D-4000-AD36-0891FD7729E1}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{6A0DEF15-914D-4000-AD36-0891FD7729E1}.Debug|x86.ActiveCfg = Release|x86
+		{6A0DEF15-914D-4000-AD36-0891FD7729E1}.Debug|x86.Build.0 = Release|x86
+		{6A0DEF15-914D-4000-AD36-0891FD7729E1}.Release|Any CPU.ActiveCfg = Release|x86
+		{6A0DEF15-914D-4000-AD36-0891FD7729E1}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{6A0DEF15-914D-4000-AD36-0891FD7729E1}.Release|Mixed Platforms.Build.0 = Release|x86
+		{6A0DEF15-914D-4000-AD36-0891FD7729E1}.Release|x86.ActiveCfg = Release|x86
+		{6A0DEF15-914D-4000-AD36-0891FD7729E1}.Release|x86.Build.0 = Release|x86
+		{A6CDF6FC-F760-4C5A-8893-551119E5E932}.Debug|Any CPU.ActiveCfg = Debug
+		{A6CDF6FC-F760-4C5A-8893-551119E5E932}.Debug|Any CPU.Build.0 = Debug
+		{A6CDF6FC-F760-4C5A-8893-551119E5E932}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{A6CDF6FC-F760-4C5A-8893-551119E5E932}.Debug|Mixed Platforms.Build.0 = Debug
+		{A6CDF6FC-F760-4C5A-8893-551119E5E932}.Debug|x86.ActiveCfg = Release
+		{A6CDF6FC-F760-4C5A-8893-551119E5E932}.Release|Any CPU.ActiveCfg = Release
+		{A6CDF6FC-F760-4C5A-8893-551119E5E932}.Release|Any CPU.Build.0 = Release
+		{A6CDF6FC-F760-4C5A-8893-551119E5E932}.Release|Mixed Platforms.ActiveCfg = Release
+		{A6CDF6FC-F760-4C5A-8893-551119E5E932}.Release|Mixed Platforms.Build.0 = Release
+		{A6CDF6FC-F760-4C5A-8893-551119E5E932}.Release|x86.ActiveCfg = Release
+		{618F4724-E31B-45AA-BF6F-FB61EAC1F736}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{618F4724-E31B-45AA-BF6F-FB61EAC1F736}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{618F4724-E31B-45AA-BF6F-FB61EAC1F736}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{618F4724-E31B-45AA-BF6F-FB61EAC1F736}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{618F4724-E31B-45AA-BF6F-FB61EAC1F736}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{618F4724-E31B-45AA-BF6F-FB61EAC1F736}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{618F4724-E31B-45AA-BF6F-FB61EAC1F736}.Release|Any CPU.Build.0 = Release|Any CPU
+		{618F4724-E31B-45AA-BF6F-FB61EAC1F736}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{618F4724-E31B-45AA-BF6F-FB61EAC1F736}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{618F4724-E31B-45AA-BF6F-FB61EAC1F736}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

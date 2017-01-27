@@ -1,0 +1,14 @@
+C:\Dropbox\RFID_Reader\Parallax28340\bin\Release\Parallax28340.dll
+C:\Dropbox\RFID_Reader\Parallax28340\bin\Release\Parallax28340.pdb
+C:\Dropbox\RFID_Reader\Parallax28340\bin\Release\FTD2XX_NET.dll
+C:\Dropbox\RFID_Reader\Parallax28340\bin\Release\FTD2XX_NET.xml
+C:\Dropbox\RFID_Reader\Parallax28340\obj\Release\ResolveAssemblyReference.cache
+C:\Dropbox\RFID_Reader\Parallax28340\obj\Release\Parallax28340.dll
+C:\Dropbox\RFID_Reader\Parallax28340\obj\Release\Parallax28340.pdb
+C:\Users\Admin\Desktop\Source\Parallax28340\bin\Release\Parallax28340.dll
+C:\Users\Admin\Desktop\Source\Parallax28340\bin\Release\Parallax28340.pdb
+C:\Users\Admin\Desktop\Source\Parallax28340\bin\Release\FTD2XX_NET.dll
+C:\Users\Admin\Desktop\Source\Parallax28340\bin\Release\FTD2XX_NET.xml
+C:\Users\Admin\Desktop\Source\Parallax28340\obj\Release\Parallax28340.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\Source\Parallax28340\obj\Release\Parallax28340.dll
+C:\Users\Admin\Desktop\Source\Parallax28340\obj\Release\Parallax28340.pdb

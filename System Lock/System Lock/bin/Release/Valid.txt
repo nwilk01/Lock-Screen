@@ -1,0 +1,11 @@
+<Valid_List>
+  <RFID_Tag ID="70005A9F0D" />
+  <RFID_Tag ID="70005AA6F9" />
+  <RFID_Tag ID="70005A4DB9" />
+  <RFID_Tag ID="70005AACD6" />
+  <RFID_Tag ID="70005A4C03" />
+  <RFID_Tag ID="70005AAEA5" />
+  <RFID_Tag ID="70005A82DB" />
+  <RFID_Tag ID="70005A434D" />
+  <RFID_Tag ID="70005AA96B" />
+</Valid_List>
