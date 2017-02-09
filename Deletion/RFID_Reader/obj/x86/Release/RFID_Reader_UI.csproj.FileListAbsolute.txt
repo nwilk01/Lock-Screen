@@ -84,3 +84,4 @@ C:\Users\Admin\Desktop\GitHub\Lock-Screen\Deletion\RFID_Reader\obj\x86\Release\R
 C:\Users\Admin\Desktop\GitHub\Lock-Screen\Deletion\RFID_Reader\obj\x86\Release\RFID_Reader.Unlocked.resources
 C:\Users\Admin\Desktop\GitHub\Lock-Screen\Deletion\RFID_Reader\obj\x86\Release\RFID_Reader.Properties.Resources.resources
 C:\Users\Admin\Desktop\GitHub\Lock-Screen\Deletion\RFID_Reader\obj\x86\Release\RFID_Reader_UI.csproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\GitHub\Lock-Screen\Deletion\RFID_Reader\obj\x86\Release\RFID_Reader.CC.resources

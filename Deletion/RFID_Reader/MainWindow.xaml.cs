@@ -7,11 +7,10 @@ using Parallax28340;
 using System.Xml.Linq;
 using System.Collections.Generic;
 using System.Linq;
+using System.Diagnostics;
 using System.Web;
-
-
-
-
+using System.Text;
+using System.Windows.Input;
 
 namespace RFID_Reader
 {
@@ -28,6 +27,9 @@ namespace RFID_Reader
 
         SoundPlayer Mplayer         = new SoundPlayer();
         FileStream wavFile          = null;
+        StringBuilder input = new StringBuilder();
+        KeyConverter memer = new KeyConverter();
+        List<string> memes = new List<string>();
 
         public MainWindow()
         {
@@ -85,14 +87,15 @@ namespace RFID_Reader
                     string[] info = tag.Split('\n');
                     if(info[0] == "" && info[1]== "" && info[2] =="$")
                     {
-                        string cc = Console.ReadLine();
-                        MessageBox.Show(cc);
-                        
+                        CC form = new CC();
+                        form.Show();
+
+                        //var message = string.Join(Environment.NewLine, memes);
+                        //MessageBox.Show(message);
                     }
                     else
                     {
                         MessageBox.Show("Fail");
-                        
                     }
                     
                 }
@@ -152,6 +155,15 @@ namespace RFID_Reader
         private void checkBoxBeepEnabled_Click(object sender, RoutedEventArgs e)
         {
             Properties.Settings.Default.Save();
+        }
+        private void CC(object sender, KeyEventArgs e)
+        {
+            string yolo;
+            Key k = (Key)e.Key;
+            yolo = memer.ConvertToString(k);
+            input.Append(yolo);
+            memes.Add(yolo); 
+                
         }
     }
 }
