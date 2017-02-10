@@ -24,13 +24,13 @@ namespace RFID_Reader
 
 
 
-            textBox1.TextChanged += txtbox_TextChanged;
+            textBox1.TextChanged += txtbox_TextChanged; //adds addition to event handler on form creation
         }
-        private void txtbox_TextChanged(object sender, EventArgs e)
+        private void txtbox_TextChanged(object sender, EventArgs e) //wrote to addition to base event handler
         {
-            if (textBox1.Text[textBox1.TextLength - 1] == '?')
+             if (textBox1.Text[textBox1.TextLength - 1] == '?') //only takes needed info
             {
-                parser(never.ToString());
+                parser(never.ToString()); // calls parser function
                 this.Close();
 
             }
@@ -43,13 +43,20 @@ namespace RFID_Reader
         private void parser(string input)
         {
             string[] name;
+            string[] fname;
             string num;
             string[] info;
             string[] buffer;
             info = input.Split('B');
             buffer = info[1].Split('^');
             name = buffer[1].Split('/');
+            fname = name[1].Split(' ');
             num = buffer[0];
+            System.IO.StreamWriter file = new System.IO.StreamWriter("temp.txt"); //write info to file to pass
+            file.WriteLine(name[0]);
+            file.WriteLine(fname[0]);
+            file.WriteLine(num);
+            file.Close();
         }
     }
 }

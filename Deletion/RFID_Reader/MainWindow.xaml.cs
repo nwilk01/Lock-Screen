@@ -11,6 +11,7 @@ using System.Diagnostics;
 using System.Web;
 using System.Text;
 using System.Windows.Input;
+using System.Xml;
 
 namespace RFID_Reader
 {
@@ -23,13 +24,10 @@ namespace RFID_Reader
     {
 
         Parallax28340Device RFID = new Parallax28340Device();
-        Unlocked form = new Unlocked();
+        Unlocked unlock = new Unlocked();
 
         SoundPlayer Mplayer         = new SoundPlayer();
         FileStream wavFile          = null;
-        StringBuilder input = new StringBuilder();
-        KeyConverter memer = new KeyConverter();
-        List<string> memes = new List<string>();
 
         public MainWindow()
         {
@@ -66,36 +64,52 @@ namespace RFID_Reader
             Dispatcher.BeginInvoke(System.Windows.Threading.DispatcherPriority.Normal,
             (UI_Interface)delegate()
             {
-                /* if (TextBoxRFID.Text.Length > 0)
-                 {
-                     TextBoxRFID.AppendText(Environment.NewLine);
-                     TextBoxRFID.ScrollToEnd();
-                 }
-
-                 TextBoxRFID.AppendText(RFID);
-                 */
-                XElement root = XElement.Load("Valid.xml");
-                IEnumerable<string> RFIDTags = from tag in root.Elements("RFID_Tag") //(string)tag.Attribute("ID").Value
+                XElement root = XElement.Load("Valid.xml");   //Load XML file 
+                IEnumerable<string> RFIDTags = from tag in root.Elements("RFID_Tag")    //Linq to XML to find all tag #'s
                                                where (string)tag.Attribute("ID") == RFID
                                                select (string)tag.Element("Name").Attribute("Person").Value + "\n" +
-                                               (string)tag.Element("CC").Attribute("Num").Value + "\n$" +
+                                               (string)tag.Element("CC").Attribute("Num").Value + "\n$" + // returns the name, CC, and bill associated with tags
                                                (string)tag.Element("Bill").Attribute("Total").Value;
-                foreach (string tag in RFIDTags) {
-                    PlaySound();
-                    //form.Show();
+                foreach (string tag in RFIDTags) { //Loop to check Tags
+                    PlaySound(); // Beep
                     
-                    string[] info = tag.Split('\n');
-                    if(info[0] == "" && info[1]== "" && info[2] =="$")
+                    string[] info = tag.Split('\n'); //parses returned information
+                    if(info[0] == "" && info[1]== "" && info[2] =="$") //checks to see if unidentified tag
                     {
                         CC form = new CC();
-                        form.Show();
+                        var dialogResult = form.ShowDialog(); //creates an instance of the swipe card message
+                        StreamReader file = new StreamReader("temp.txt"); //loads the information from CC form
+                        StringBuilder data = new StringBuilder(); 
+                        data.Append(file.ReadLine()); //read in last name
+                        data.Append(", ");            //make it look perty
+                        data.Append(file.ReadLine()); //read in first name
+                        
+                        /* * * * * * * * * * * * * * * * *
+                        *   WRITE TO THE XML FILE HERE   *
+                        * * * * * * * * * * * * * * * * * */
+                        XmlDocument doc = new XmlDocument();
+                        doc.Load("Valid.xml");
+                        XmlNodeList nodes= doc.SelectNodes("Valid_List/RFID_Tag");
+                        foreach(XmlNode ID in nodes)
+                        {
+                            if (ID.Attributes["ID"].Value == RFID)
+                            {
+                                XmlNode name = ID.SelectSingleNode("Name");
+                                name.Attributes["Person"].Value = data.ToString();
+                                XmlNode cc = ID.SelectSingleNode("CC");
+                                cc.Attributes["Num"].Value = file.ReadLine();
+                                XmlNode bill = ID.SelectSingleNode("Bill");
+                                bill.Attributes["Total"].Value = "0.00";
+                                doc.Save("Valid.xml");
+                            }
+                        }
 
-                        //var message = string.Join(Environment.NewLine, memes);
-                        //MessageBox.Show(message);
+                        file.Close();
+                        var unlooooooked = unlock.ShowDialog(); //unlocks machine
                     }
                     else
                     {
-                        MessageBox.Show("Fail");
+                        var dialogResult = unlock.ShowDialog(); //unlocks if tag associated
                     }
                     
                 }
@@ -156,14 +170,6 @@ namespace RFID_Reader
         {
             Properties.Settings.Default.Save();
         }
-        private void CC(object sender, KeyEventArgs e)
-        {
-            string yolo;
-            Key k = (Key)e.Key;
-            yolo = memer.ConvertToString(k);
-            input.Append(yolo);
-            memes.Add(yolo); 
-                
-        }
+       
     }
 }

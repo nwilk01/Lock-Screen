@@ -1,8 +1,7 @@
 ﻿<Window x:Class="RFID_Reader.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="RFID Reader" Height="350" Width="525" Closing="MainWindowClosing"
-        KeyDown="CC">
+        Title="RFID Reader" Height="350" Width="525" Closing="MainWindowClosing">
     <Window.Background>
         <ImageBrush ImageSource="C:\Users\Admin\Desktop\Github\Lock-Screen\Deletion\Capture.png"></ImageBrush>
     </Window.Background>
