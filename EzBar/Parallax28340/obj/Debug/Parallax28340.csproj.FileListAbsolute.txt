@@ -1,0 +1,7 @@
+C:\Users\Nathan\Desktop\EzBar\Parallax28340\bin\Debug\Parallax28340.dll
+C:\Users\Nathan\Desktop\EzBar\Parallax28340\bin\Debug\Parallax28340.pdb
+C:\Users\Nathan\Desktop\EzBar\Parallax28340\bin\Debug\FTD2XX_NET.dll
+C:\Users\Nathan\Desktop\EzBar\Parallax28340\bin\Debug\FTD2XX_NET.xml
+C:\Users\Nathan\Desktop\EzBar\Parallax28340\obj\Debug\Parallax28340.csprojResolveAssemblyReference.cache
+C:\Users\Nathan\Desktop\EzBar\Parallax28340\obj\Debug\Parallax28340.dll
+C:\Users\Nathan\Desktop\EzBar\Parallax28340\obj\Debug\Parallax28340.pdb
